@@ -1,9 +1,10 @@
 /* RESET AND BASIC STYLING */
 
 :root {
-  --background-color: rgb(2, 32, 45);
+  --background-color: #020616;
   --border-color: rgba(255, 255, 255, 0.3);
   --nav-color: rgb(2, 20, 30);
+  --text-color: 
 }
 
 *, *::after, *::before {
@@ -150,12 +151,10 @@ article[data-status="unknown"] {
 }
 
 .notelligent {
-  background-image: url("https://www.simpleimageresizer.com/_uploads/photos/e453ac14/image_1_1500x800.png");
-  max-width: none;
-  min-height: 100%;
-  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
   object-fit: cover;
-  background-size: cover;
 }
 
 .title {
@@ -175,6 +174,8 @@ article[data-status="unknown"] {
   margin-right: 1rem;
 }
 
+/* BASIC RESPONSIVENESS */
+
 @media screen and (max-width: 1310px) {
   .title > h2 {
     font-size: 6rem;
@@ -188,15 +189,24 @@ article[data-status="unknown"] {
   #nav-contact, #nav-link {
     display: none;
   }
-  #nav-social {
+  #nav-social, #nav-logo {
     flex-grow: 0;
-  }
-  #nav-logo {
-    flex-grow: 1;
-    flex-basis: auto;
+    flex-basis: calc(100%/3)
   }
   #nav-menu {
     display: flex;
-    padding: 2rem 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-basis: calc(100%/3);
+    font-size: 1.75rem;
+  }
+
+  #nav-logo {
+    font-size: 2rem;
+  }
+
+  #nav-logo > a {
+    gap: 1rem;
   }
 }
